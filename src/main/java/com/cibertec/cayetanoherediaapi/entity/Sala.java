@@ -21,6 +21,10 @@ public class Sala {
 	@OneToMany(mappedBy="sala")
 	@JsonIgnore
 	private List<Cita> listaSalasCita;
+
+	@OneToOne(mappedBy="salaMedico")
+	@JsonIgnore
+	private Medico medicoCita;
 	
 	public Sala() {
 		
@@ -43,10 +47,21 @@ public class Sala {
 	public void setEspeSala(Especialidad espeSala) {
 		this.espeSala = espeSala;
 	}
-	
-	
-	
-	
-	
-	
+
+
+	public List<Cita> getListaSalasCita() {
+		return listaSalasCita;
+	}
+
+	public void setListaSalasCita(List<Cita> listaSalasCita) {
+		this.listaSalasCita = listaSalasCita;
+	}
+
+	public Medico getMedicoCita() {
+		return medicoCita;
+	}
+
+	public void setMedicoCita(Medico medicoCita) {
+		this.medicoCita = medicoCita;
+	}
 }

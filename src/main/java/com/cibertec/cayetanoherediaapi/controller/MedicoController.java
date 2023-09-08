@@ -30,8 +30,8 @@ public class MedicoController {
 	
 	@GetMapping("/listaEspecialidad/{especialidad}")
 	@ResponseBody
-	public List<Medico> listaMedicosEspecialidad(@PathVariable int espe) {
-		return serMedico.listarMedicoPorEspecialidad(espe);
+	public List<Medico> listaMedicosEspecialidad(@PathVariable int especialidad) {
+		return serMedico.listarMedicoPorEspecialidad(especialidad);
 	}
 
 

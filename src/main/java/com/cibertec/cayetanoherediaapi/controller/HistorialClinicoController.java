@@ -41,8 +41,8 @@ public class HistorialClinicoController {
 	}
 	@GetMapping("/buscar/{id}")
 	@ResponseBody
-	public HistorialClinico buscarPorIdHistorialClinico(@PathVariable("id")Integer cod) {
-		return hispe.buscarPorID(cod);
+	public HistorialClinico buscarPorIdHistorialClinico(@PathVariable("id")Integer id) {
+		return hispe.buscarPorID(id);
 	}
 	
 	@GetMapping("/buscarPorPaciente/{id}")

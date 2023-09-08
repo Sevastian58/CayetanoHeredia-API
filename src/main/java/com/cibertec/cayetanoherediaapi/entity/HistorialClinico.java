@@ -15,7 +15,7 @@ public class HistorialClinico {
 	
 	//relacion uno a uno
 	@OneToOne
-	@JsonIgnore
+	//@JsonIgnore
 	@JoinColumn(name="CODPaciente")
 	private Paciente pacienteHistoria;
 
@@ -35,6 +35,7 @@ public class HistorialClinico {
 		this.descripcion = descripcion;
 	}
 
+
 	public Paciente getPacienteHistoria() {
 		return pacienteHistoria;
 	}
@@ -42,10 +43,4 @@ public class HistorialClinico {
 	public void setPacienteHistoria(Paciente pacienteHistoria) {
 		this.pacienteHistoria = pacienteHistoria;
 	}
-
-
-
-	
-	
-	
 }

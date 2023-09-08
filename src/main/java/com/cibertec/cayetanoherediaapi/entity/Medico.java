@@ -31,7 +31,11 @@ public class Medico {
 	public Medico() {
 		
 	}
-	
+
+	@OneToOne
+	@JoinColumn(name="Sala")
+	private Sala salaMedico;
+
 	@ManyToOne
 	@JoinColumn(name="especialidad")
 	private Especialidad especialidad;
@@ -126,5 +130,21 @@ public class Medico {
 
 	public void setEspecialidad(Especialidad especialidad) {
 		this.especialidad = especialidad;
+	}
+
+	public Sala getSalaMedico() {
+		return salaMedico;
+	}
+
+	public void setSalaMedico(Sala salaMedico) {
+		this.salaMedico = salaMedico;
+	}
+
+	public List<Cita> getListaMedCita() {
+		return listaMedCita;
+	}
+
+	public void setListaMedCita(List<Cita> listaMedCita) {
+		this.listaMedCita = listaMedCita;
 	}
 }

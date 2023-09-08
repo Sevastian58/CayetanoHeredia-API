@@ -37,9 +37,9 @@ public class CitaController {
 	
 	@GetMapping("/listaCreate")
 	@ResponseBody
-	public List<Cita> listaCreate(@RequestParam("especialidad") Integer codEspe, 
-			@RequestParam("sala") String numSala,
-			@RequestParam("medico") String codMed,
+	public List<Cita> listaCreate(@RequestParam("codEspe") Integer codEspe,
+			@RequestParam("numSala") String numSala,
+			@RequestParam("codMed") String codMed,
 			@RequestParam("fecha") String fecha){
 		LocalDate fechaDate= LocalDate.parse(fecha);
 		return serCita.listarCitasCreate(codEspe, numSala, codMed, fechaDate);
