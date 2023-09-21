@@ -22,9 +22,6 @@ public class Sala {
 	@JsonIgnore
 	private List<Cita> listaSalasCita;
 
-	@OneToOne(mappedBy="salaMedico")
-	@JsonIgnore
-	private Medico medicoCita;
 	
 	public Sala() {
 		
@@ -57,11 +54,4 @@ public class Sala {
 		this.listaSalasCita = listaSalasCita;
 	}
 
-	public Medico getMedicoCita() {
-		return medicoCita;
-	}
-
-	public void setMedicoCita(Medico medicoCita) {
-		this.medicoCita = medicoCita;
-	}
 }

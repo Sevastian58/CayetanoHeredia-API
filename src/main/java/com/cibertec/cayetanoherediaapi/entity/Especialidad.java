@@ -51,13 +51,20 @@ public class Especialidad {
 		this.listaEspe = listaEspe;
 	}
 
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
+	public Sala getSala() {
+		return sala;
+	}
+
+	public void setSala(Sala sala) {
+		this.sala = sala;
+	}
+
+	public List<Cita> getListaEspeCita() {
+		return listaEspeCita;
+	}
+
+	public void setListaEspeCita(List<Cita> listaEspeCita) {
+		this.listaEspeCita = listaEspeCita;
+	}
 }
